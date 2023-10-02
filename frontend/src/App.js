@@ -4,7 +4,7 @@ import PriceHistoryTable from "./components/PriceHistoryTable";
 import axios from "axios";
 import TrackedProductList from "./components/TrackedProductList";
 
-const URL = "http://localhost:5000";
+const URL = "http://localhost:8000";
 
 function App() {
   const [showPriceHistory, setShowPriceHistory] = useState(false);

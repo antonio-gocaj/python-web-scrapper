@@ -12,7 +12,7 @@ const TrackedProductList = () => {
   const fetchTrackedProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/tracked-products"
+        "http://localhost:8000/tracked-products"
       );
 
       setTrackedProducts(response.data);
@@ -28,7 +28,7 @@ const TrackedProductList = () => {
   const handleAddTrackedProduct = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/add-tracked-product",
+        "http://localhost:8000/add-tracked-product",
         {
           name: newTrackedProduct,
         }
@@ -46,7 +46,7 @@ const TrackedProductList = () => {
 
   const handleToggleTrackedProduct = async (productId) => {
     try {
-      await axios.put(`http://localhost:5000/tracked-product/${productId}`);
+      await axios.put(`http://localhost:8000/tracked-product/${productId}`);
       setTrackedProducts((prevProducts) =>
         prevProducts.map((product) =>
           product.id === productId

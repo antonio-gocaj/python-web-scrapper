@@ -1,6 +1,6 @@
 from requests import post
 
-URL = "http://localhost:5000/update-tracked-products"
+URL = "http://localhost:8000/update-tracked-products"
 
 if __name__ == "__main__":
     print("Sending request to", URL)
