@@ -125,7 +125,7 @@ def start_scraper():
     search_text = request.json.get('search_text')
 
     # Run scraper asynchronously in a separate Python process
-    command = f"python ./scraper/__init__.py {url} \"{search_text}\" /results"
+    command = f"python Backend/scraper/__init__.py {url} \"{search_text}\" /results"
     subprocess.Popen(command, shell=True)
 
     response = {'message': 'Scraper started successfully'}

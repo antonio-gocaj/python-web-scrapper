@@ -19,7 +19,7 @@ available_urls = URLS.keys()
 
 
 def load_auth():
-    FILE = os.path.join("Scraper", "auth.json")
+    FILE = os.path.join("Backend/scraper", "auth.json")
     with open(FILE, "r") as f:
         return json.load(f)
 
@@ -86,7 +86,7 @@ def post_results(results, endpoint, search_text, source):
     data = {"data": results, "search_text": search_text, "source": source}
 
     print("Sending request to", endpoint)
-    response = post("http://localhost:8000" + endpoint,
+    response = post("http://localhost:5000" + endpoint,
                     headers=headers, json=data)
     print("Status code:", response.status_code)
 
